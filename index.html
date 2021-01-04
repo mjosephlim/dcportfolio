@@ -31,18 +31,20 @@
 
     <div class="hero">
         <div class="content">
-            <h1>Beautiful. Intuitive. Minimalistic.</h1>
-            <div class="meet">
+            <h1 class="stagger1">Beautiful.</h1>
+            <h1 class="stagger1">Intuitive.</h1>
+            <h1 class="stagger1">Minimalistic.</h1>
+            <div class="meet stagger1">
                 <span><img class="caret" src="images/caret-down-solid.svg" class="icons" alt="down"></span>
                 <p>Mark Joseph Lim</p>
             </div>
-            <svg class="scroll"xmlns="http://www.w3.org/2000/svg" width="38" height="65" viewBox="0 0 38 65">
+            <svg class="scroll stagger1"xmlns="http://www.w3.org/2000/svg" width="38" height="65" viewBox="0 0 38 65">
                 <g id="scroll" transform="translate(-262 -689)">
                   <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(262 689)" fill="none" stroke="#fff" stroke-width="6">
                     <rect width="38" height="65" rx="19" stroke="none"/>
                     <rect x="3" y="3" width="32" height="59" rx="16" fill="none"/>
                   </g>
-                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(270 700)" fill="#fff"/>
+                  <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(270 700)" fill="#fff"/>
                 </g>
               </svg>
               
@@ -137,5 +139,63 @@
             <a href="#"><img src="images/project-1.png" alt="sample-project"></a>
         </div>
     </section><!--portfolio-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl=gsap.timeline();
+
+        tl.from('.content',{
+            y:'-30%',
+            opacity:0,
+            duration: 2,
+            ease: Power4.easeOut
+        })
+        tl.from('.stagger1',{
+            opacity:0,
+            y:-50,
+            stagger:0.3,
+            duration:2,
+            ease: Power4.easeOut
+        },"-=1.5")
+
+        tl.from('.hero-design',{
+            opacity:0, 
+            y:50,
+            ease:Power4.easeOut,
+            duration:1,
+        },"-=1.5")
+
+        gsap.from(".square-anim",{
+            stagger:.2,
+            scale:0.2,
+            duration:2,
+            ease:Back.easeIn.config(7)
+        })
+
+        gsap.from(".transition2",{
+            scrollTrigger:{
+                trigger:".transition2",
+                start:"top bottom"
+            },
+            y:50,
+            opacity:0,
+            duration:1.2,
+            stagger:.9,
+        })
+
+        gsap.from(".transition3",{
+            scrollTrigger:{
+                trigger:".transition3",
+                start:"top center"
+            },
+            y:50,
+            opacity:0,
+            duration:1.2,
+            stagger:.9,
+        })
+    </script>
 </body>
 </html>

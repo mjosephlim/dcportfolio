@@ -321,4 +321,32 @@ section {
     padding: 6em 8em 6em 20em;
   }
 }
+
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnim {
+  from {
+    -webkit-transform: translate(270px, 700px);
+            transform: translate(270px, 700px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(270px, 720px);
+            transform: translate(270px, 720px);
+  }
+}
+
+@keyframes circleAnim {
+  from {
+    -webkit-transform: translate(270px, 700px);
+            transform: translate(270px, 700px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(270px, 720px);
+            transform: translate(270px, 720px);
+  }
+}
 /*# sourceMappingURL=main.css.map */
