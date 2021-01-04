@@ -7,6 +7,9 @@ $nav-black:#131313;
 $body-black:#1b1b1b;
 $purple:#6E00FF;
 
+html{
+    scroll-behavior: smooth;
+ }
 .icons{
 height:40px;
 }
@@ -43,7 +46,7 @@ header{
     display:flex;
     justify-content: space-between;
     padding:2em;
-
+    
     .logo{
         color:#0080FF;
         font-weight: bold;   
@@ -184,6 +187,26 @@ section{
     border-radius: 1em;
     margin-bottom: 2em;
 }
+
+.scroll-top {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    display: none;
+  }
+  .scroll-top i {
+    display: inline-block;
+    color: #fff;
+  }
+
+  .btn{
+      background-color: #131313;
+      border:none;
+      cursor: pointer;
+      opacity: .7;
+  }
 
 @media only screen and (min-width:800px){
     .featured, .portfolio{

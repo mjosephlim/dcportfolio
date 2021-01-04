@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 .icons {
   height: 40px;
 }
@@ -183,6 +187,27 @@ section {
 .portfolio-container a img {
   border-radius: 1em;
   margin-bottom: 2em;
+}
+
+.scroll-top {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  display: none;
+}
+
+.scroll-top i {
+  display: inline-block;
+  color: #fff;
+}
+
+.btn {
+  background-color: #131313;
+  border: none;
+  cursor: pointer;
+  opacity: .7;
 }
 
 @media only screen and (min-width: 800px) {

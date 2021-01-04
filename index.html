@@ -13,18 +13,18 @@
             <a href="index.html" class="logo">M J L</a>
             <nav>
                 <ul>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">My Skills</a></li>
-                    <li><a href="#">Hire Me</a></li>
+                    <li><a href="#featured-id">My Work</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="https://www.linkedin.com/in/mark-joseph-lim-2a0bbb166/" target="_blank">Hire Me</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="social-header">
             <ul>
-                <li><a href="#"><img src="images/facebook-square-brands.svg" class="icons" alt="fb-logo"></a></li>
-                <li><a href="#"><img src="images/instagram-square-brands.svg" class="icons" alt="ig-logo"></a></li>
-                <li><a href="#"><img src="images/linkedin-brands.svg" class="icons" alt="linkedin-logo"></a></li>
+                <li><a href="https://www.facebook.com/marklovesira/" target="_blank"><img src="images/facebook-square-brands.svg" class="icons" alt="fb-logo"></a></li>
+                <li><a href="https://www.instagram.com/marklovesira/" target="_blank"><img src="images/instagram-square-brands.svg" class="icons" alt="ig-logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/mark-joseph-lim-2a0bbb166/" target="_blank"><img src="images/linkedin-brands.svg" class="icons" alt="linkedin-logo"></a></li>
             </ul>
         </div>
     </div>
@@ -64,18 +64,19 @@
           
     </div><!--hero-->
 
-    <section class="featured">
+    <section class="featured" id="featured-id">
         <div class="left">
             <div class="inner transition2">
                 <p class="subtitle">Featured Project</p>
-                <a href="#" class="featured-title">mark-joseph-lim.herokuapp.com</a>
+                <a href="https://mark-joseph-lim.herokuapp.com" target="_blank" class="featured-title">mark-joseph-lim.herokuapp.com</a>
                 <p class="featured-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi at fugit, optio repudiandae id ratione!</p>
             </div>
         </div><!--leftdiv-->
-        <img class="right transition2" src="images/project-1.png" alt="Featured Project">
+        <a href="https://mark-joseph-lim.herokuapp.com" target="_blank"><img class="right transition2" src="images/project-1.png" alt="Featured Project"></a>
+        
     </section><!--featured-section-->
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="skills-container">
             <ul>
                 <li class="transition2">
@@ -105,7 +106,7 @@
         </div>
     </section><!--skills-->
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio-container transition3">
             <div class="portfolio-left">
                 <div class="inner">
@@ -140,9 +141,16 @@
         </div>
     </section><!--portfolio-->
 
+    <button class="btn btn-primary scroll-top" data-scroll="up" type="button">
+        <i class="fa fa-chevron-up"></i>
+        </button>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    <script src="scroll.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
         var tl=gsap.timeline();
@@ -183,7 +191,7 @@
             y:50,
             opacity:0,
             duration:1.2,
-            stagger:.9,
+            stagger:.5,
         })
 
         gsap.from(".transition3",{
