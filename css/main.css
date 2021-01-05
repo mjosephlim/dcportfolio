@@ -189,6 +189,58 @@ section {
   margin-bottom: 2em;
 }
 
+.footer {
+  background: #131313;
+  color: #336699;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.footer p {
+  font-style: italic;
+}
+
+.footer .footer-skills {
+  display: block;
+  padding: 1em 1em 1em 1em;
+}
+
+.footer .footer-skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer-skills ul .footer-icon {
+  height: 30px;
+}
+
+.footer .footer-skills ul .footer-icon:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+.footer .footer-skills ul .footer-icon:hover path {
+  fill: #336699;
+  -webkit-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+.footer span {
+  padding: 1em;
+}
+
+.footer .copyright {
+  font-size: .60em;
+  color: gray;
+  padding-bottom: 0;
+}
+
 .scroll-top {
   width: 30px;
   height: 30px;

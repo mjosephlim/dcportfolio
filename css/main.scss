@@ -188,6 +188,50 @@ section{
     margin-bottom: 2em;
 }
 
+.footer{
+    background: $nav-black;
+    color: $primary;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    p{
+        font-style: italic;
+    }
+    .footer-skills{
+        display:block;
+        padding:1em 1em 1em 1em;
+        ul{
+            display:flex;
+            justify-content: center;
+            .footer-icon{
+                height:30px;
+                
+            }
+            .footer-icon:hover{
+                transform: translateY(-5px);
+                transition:ease-in 0.5s;
+                path{
+                    fill:$primary;
+                    transition: ease-in 0.5s;
+                    
+                }
+            }
+            
+        }
+        
+    
+    }
+    span{
+        padding: 1em;
+    }
+    .copyright{
+        font-size: .60em;
+        color:gray;
+        padding-bottom: 0;
+    }
+
+    
+}
+
 .scroll-top {
     width: 30px;
     height: 30px;
